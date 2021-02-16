@@ -1,0 +1,23 @@
+.repo-grid-item{
+    margin: .5em;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    min-height: 372px;
+    .repo-grid-item-content{
+        text-align: center;
+        img{
+            margin: auto;
+            max-width: 75%;
+        }
+        .repo-name{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+    }
+}
+
+

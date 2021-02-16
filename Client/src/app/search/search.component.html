@@ -1,0 +1,25 @@
+<p-dataView #dv [value]="repos" [paginator]="true" [rows]="9" layout="grid">
+    <ng-template pTemplate="header">
+        <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+            <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+                <i class="pi pi-search"></i>
+                <input type="search" pInputText placeholder="Search by Name" (input)="onSearch($event.target.value)">
+            </span>
+        </div>
+    </ng-template>
+    <ng-template let-repo pTemplate="gridItem">
+        <div class="p-col-12 p-md-4">
+            <div class="repo-grid-item">
+                <div class="repo-grid-item-content">
+                    <img [src]="repo.owner.avatar_url" [alt]="repo.name" />
+                    <div class="repo-name">{{repo.name}}</div>
+                </div>
+                <div>
+                    <p-button icon="pi pi-bookmark" (click)="onAddRepo(repo)">
+                    </p-button>
+                </div>
+            </div>
+
+        </div>
+    </ng-template>
+</p-dataView>
